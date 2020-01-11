@@ -1,1 +1,32 @@
 // Mixins Here
+.nav-placement {
+    display: flex;
+    justify-content: center;
+}
+.btn-border {
+    border-radius: 10px;
+}
+.btn-size (@h, @w) {
+    height: @h;
+    width: @w;
+}
+
+.btn-words (@f, @c) {
+    display: @f;
+    justify-content: @c;
+}
+
+.clickable (@bg, @c) {
+    background-color: @bg;
+    &:hover {
+        background-color: lighten(@bg, 10%);
+    }
+
+
+    color: @c;
+
+&:hover {
+    color: darken(@c, 50%);
+}
+}
+
